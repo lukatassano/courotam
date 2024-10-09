@@ -14,23 +14,23 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   const [selected, setSelected] = useState<Card | null>(null);
 
   const handleClick = (card: Card) => {
-    setSelected(selected?.id === card.id ? null : card); // Alterna entre selecionar e desmarcar o card clicado
+    setSelected(selected?.id === card.id ? null : card);
   };
 
   const handleOutsideClick = () => {
-    setSelected(null); // Desmarcar qualquer card quando clicar fora
+    setSelected(null);
   };
 
   return (
     <div
       className="w-full h-full p-12 grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-4 relative"
-      onClick={handleOutsideClick} // Detecta clique fora do card para restaurar estado original
+      onClick={handleOutsideClick}
     >
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className)}>
           <motion.div
             onClick={(e) => {
-              e.stopPropagation(); // Evita que o clique propague para o contêiner externo
+              e.stopPropagation();
               handleClick(card);
             }}
             className={cn(
@@ -39,10 +39,10 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
             layoutId={`card-${card.id}`}
             animate={
               selected?.id === card.id
-                ? { scale: 1.2, zIndex: 50 } // Aplica zoom e zIndex mais alto no card selecionado
-                : { scale: 1, zIndex: 1 } // Restaura para o tamanho original
+                ? { scale: 1.2, zIndex: 50 }
+                : { scale: 1, zIndex: 1 }
             }
-            transition={{ duration: 0.4, ease: "easeInOut" }} // Animação de transição suave
+            transition={{ duration: 0.4, ease: "easeInOut" }}
           >
             <ImageComponent card={card} />
           </motion.div>
