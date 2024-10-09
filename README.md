@@ -6,7 +6,7 @@
 
 O **Courotam** é um website desenvolvido para apresentar soluções em estofados de alta qualidade, voltado tanto para negócios como para residências. O site possui um layout responsivo e elegante, utilizando animações suaves e interatividade para destacar os produtos e serviços da marca.
 
-![Screenshot do Courotam Website](./public/ScreenshotSofa.png.png)
+![Screenshot do Courotam Website](./public/ScreenshotSofa.png)
 
 ## 🌟 Funcionalidades
 
