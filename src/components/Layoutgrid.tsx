@@ -26,13 +26,12 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   return (
-    <div className="w-full h-full p-10 grid grid-rows-5 grid-cols-6 md:grid-cols-4  max-w-7xl mx-auto gap-4 relative">
+    <div className="w-full h-full p-12 grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-4 relative"> {/* Ajusta o número de colunas */}
       {cards.map((card, i) => (
-        <div key={i} className={cn(card.className, "")}>
+        <div key={i} className={cn(card.className)}>
           <motion.div
             onClick={() => handleClick(card)}
             className={cn(
-              card.className,
               "relative overflow-hidden",
               selected?.id === card.id
                 ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
@@ -60,27 +59,30 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 };
 
 const ImageComponent = ({ card }: { card: Card }) => {
-  return typeof card.thumbnail !== "string" ? (
-    <Image
-      src={card.thumbnail}
-      height="500"
-      width="500"
-      className={cn(
-        "object-cover object-center absolute inset-0 h-full w-full transition duration-200"
+  return (
+    <div className="relative w-full h-64">
+      {" "}
+      {/* Contêiner para a imagem */}
+      {typeof card.thumbnail !== "string" ? (
+        <Image
+          src={card.thumbnail}
+          layout="fill" // Muda o layout para preencher o contêiner
+          className={cn(
+            "object-cover object-center transition duration-200" // Remove a classe `absolute` e usa `layout="fill"`
+          )}
+          alt="thumbnail"
+        />
+      ) : (
+        <motion.img
+          layoutId={`image-${card.id}-image`}
+          src={card.thumbnail}
+          className={cn(
+            "object-cover object-top transition duration-200 w-full h-full" // Ajusta para o tamanho completo
+          )}
+          alt="thumbnail"
+        />
       )}
-      alt="thumbnail"
-    />
-  ) : (
-    <motion.img
-      layoutId={`image-${card.id}-image`}
-      src={card.thumbnail}
-      height="500"
-      width="500"
-      className={cn(
-        "object-cover object-top absolute inset-0 h-full w-full transition duration-200"
-      )}
-      alt="thumbnail"
-    />
+    </div>
   );
 };
 
