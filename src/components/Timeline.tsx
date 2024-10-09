@@ -11,10 +11,10 @@ import {
 import React, { useEffect, useRef, useState } from "react";
 
 export interface TimelineEntry {
-    title: string;
-    content: React.ReactNode;
-    images?: StaticImageData[];
-  }
+  title: string;
+  content: React.ReactNode;
+  images?: StaticImageData[];
+}
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -42,11 +42,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 px-10 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-white dark:text-white max-w-4xl">
+        <h2 className="text-lg font-bold md:text-4xl mb-4 text-white dark:text-white max-w-4xl">
           Nossa história
         </h2>
       </div>
-  
+
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
           <div
@@ -61,33 +61,36 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 {item.title}
               </h3>
             </div>
-  
-            <div className="relative pl-2 pr-4 md:pl-4 w-full flex flex-col">
-  
-              <div className={`flex flex-col ${item.images ? "md:flex-row" : ""} gap-4 m-10 justify-center items-center`}>
-                {/* Texto */}
-                <div className="w-full md:w-1/2">
-                  {item.content}
-                </div>
+
+            <div className="relative pl-2 pr-4 md:pl-4 w-full flex flex-row">
+              <div
+                className={`flex flex-col ${
+                  item.images ? "md:flex-row" : ""
+                } gap-4 m-10 justify-center items-center`}
+              >
+                <div className="w-full p-24 md:w-2/2 text-base md:text-lg lg:text-xl">{item.content}</div>
 
                 {item.images && item.images.length > 0 && (
-                    <div className="flex flex-col md:flex-row gap-4 w-full md:w-1/2">
-                        {item.images.map((imgSrc, imgIndex) => (
-                        <div key={imgIndex} className="mt-4 md:mt-0 md:ml-4 w-full">
-                            <Image
-                            src={imgSrc}
-                            alt={`${item.title} - imagem ${imgIndex + 1}`}
-                            className="w-full h-auto rounded-md shadow-md"
-                            />
-                        </div>
-                        ))}
-                    </div>
-                    )}
+                  <div className="flex flex-col md:flex-col gap-4 w-full md:w-72">
+                    {item.images.map((imgSrc, imgIndex) => (
+                      <div
+                        key={imgIndex}
+                        className="mt-4 md:mt-0 md:ml-4 w-full"
+                      >
+                        <Image
+                          src={imgSrc}
+                          alt={`${item.title} - imagem ${imgIndex + 1}`}
+                          className="w-full h-auto rounded-md shadow-md transition-transform duration-300 ease-in-out hover:scale-150"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>
         ))}
-        
+
         <div
           style={{
             height: height + "px",
@@ -105,4 +108,4 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       </div>
     </div>
   );
-}  
+};

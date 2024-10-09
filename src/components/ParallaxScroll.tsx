@@ -14,8 +14,8 @@ export const ParallaxScroll = ({
 }) => {
   const gridRef = useRef<any>(null);
   const { scrollYProgress } = useScroll({
-    container: gridRef, 
-    offset: ["start start", "end start"], 
+    container: gridRef,
+    offset: ["start start", "end start"],
   });
 
   const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
@@ -28,9 +28,7 @@ export const ParallaxScroll = ({
   const secondPart = images.slice(third, 2 * third);
   const thirdPart = images.slice(2 * third);
 
-
   return (
-    
     <div
       className={cn("h-[80rem] items-start overflow-y-auto w-full", className)}
       ref={gridRef}
@@ -41,10 +39,7 @@ export const ParallaxScroll = ({
       >
         <div className="grid gap-10">
           {firstPart.map((el, idx) => (
-            <motion.div
-              style={{ y: translateFirst }} 
-              key={"grid-1" + idx}
-            >
+            <motion.div style={{ y: translateFirst }} key={"grid-1" + idx}>
               <Image
                 src={el}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"

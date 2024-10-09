@@ -1,70 +1,25 @@
-<div align="center">
-  <a href="https://github.com/karthikmudunuri/eldoraui">
+![Screenshot do Courotam Website](./public/screenshotLogo.png)
 
- <img src="https://github.com/user-attachments/assets/54c559b8-0dd1-4ef8-a3d0-06f5086224b0" alt="Logo" width="60" height="60">
-  </a>
-  <h1 align="center">Eldora UI</h1>
-  <p align="center">
-   open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
-100% open-source, and customizable.
-  </p>
-  <p>
-    
-   <a href="https://www.eldoraui.site/">Visit site</a>
-    ·
-    <a href="https://github.com/karthikmudunuri/eldoraui/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/karthikmudunuri/eldoraui/issues">Request Feature</a>
-  </p>
-</div>
+# Courotam Website
 
-<!-- ABOUT THE TEMPLATE -->
+## 📖 Sobre o Projeto
 
-<div align="center mt-5">
+O **Courotam** é um website desenvolvido para apresentar soluções em estofados de alta qualidade, voltado tanto para negócios como para residências. O site possui um layout responsivo e elegante, utilizando animações suaves e interatividade para destacar os produtos e serviços da marca.
 
- <img width="1420" alt="saas-landing" src="https://github.com/user-attachments/assets/fcaf6b8d-004b-41d5-a1f8-8b609d626950">
+![Screenshot do Courotam Website](./public/ScreenshotSofa.png.png)
 
- 
-</div>
+## 🌟 Funcionalidades
 
-# Saas Landing Page
+- **Animação de Palavras**: A seção de cabeçalho utiliza um efeito de palavras que alternam automaticamente, destacando diferentes tipos de ambientes que podem ser transformados com os estofados.
+- **Scroll Parallax**: A rolagem suave é aplicada para proporcionar uma navegação fluida e interativa.
+- **Seções Interativas**: Imagens e textos ganham destaque e movimento ao passar o cursor sobre eles, proporcionando uma experiência visual dinâmica.
 
-Template for saas landing page with dark theme using Next.js 14, React, TailwindCSS, Framer motion
+## 🛠️ Tecnologias Utilizadas
 
-# Features
+O site foi desenvolvido com as seguintes tecnologias:
 
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Eldora UI
-- Responsive for different devices
-- Optimized for Next.js and Vercel
-
-# Getting Started Locally
-
-1. Clone this repository to your local machine:
-
-   ```bash
-   git clone https://github.com/karthikmudunuri/portfolio-template
-   ```
-
-2. Move to the cloned directory
-
-   ```bash
-   cd portfolio-template
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-4. Start the local Server:
-
-   ```bash
-   npm run dev
-   ```
-
-5. Open the [Components](https://github.com/karthikmudunuri/saas-landing-page-template/tree/main/src/components) folder and make changes
-
-# License
-
-Licensed under the [MIT license](https://github.com/karthikmudunuri/saas-landing-page-template/blob/main/LICENSE.md).
+- **Next.js**: Framework React para renderização do lado do servidor e criação de páginas dinâmicas.
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática, aumentando a robustez do código.
+- **Tailwind CSS**: Framework de estilização utilitário que facilita a criação de layouts responsivos.
+- **Framer Motion**: Biblioteca para animações e transições suaves no React.

@@ -1,9 +1,9 @@
-import { Hero } from "@/components/Hero";
-import { LogoTicker } from "@/components/LogoTicker";
-import { Features } from "@/components/Features";
-import { Footer } from "@/components/Footer";
-import { Timeline } from "@/components/timeline";
-import { timelineData } from "@/components/TimelineData";
+import { Hero } from "../components/Hero";
+import { LogoTicker } from "../components/LogoTicker";
+import { Features } from "../components/Features";
+import { Footer } from "../components/Footer";
+import { Timeline } from "../components/Timeline";
+import { timelineData } from "../components/TimelineData";
 
 export default function Home() {
   return (
@@ -12,14 +12,14 @@ export default function Home() {
         <Hero />
         <Features />
 
-       { /*<div className="h-[100vh] bg-black">
+        {/*<div className="h-[100vh] bg-black">
           <LayoutGrid cards={cards} />
         </div>*/}
 
         <Timeline data={timelineData} />
         <LogoTicker />
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { cn } from "../../lib/utils";
 import Image, { StaticImageData } from "next/image";
 
@@ -26,7 +26,6 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   return (
-    
     <div className="w-full h-full p-10 grid grid-rows-5 grid-cols-6 md:grid-cols-4  max-w-7xl mx-auto gap-4 relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
