@@ -1,7 +1,7 @@
-import { FlipWords } from "./FlipWords";
-import { LayoutGridDemo } from "./LayoutgridDemo";
+import { FlipWords } from "../components/FlipWords";
+import { LayoutGridDemo } from "../components/LayoutgridDemo";
 
-export const Features = () => {
+export const About = () => {
   return (
     <div className="containerLarge text-white py-20 sm:py-40 bg-gradient-to-t from-black to-black">
       <div className="container mx-auto px-4 block lg:hidden">
@@ -10,12 +10,15 @@ export const Features = () => {
         </h2>
       </div>
 
-      <div className="containerMedium mx-auto px-4 hidden lg:block">
+      <div
+        id="about"
+        className="containerMedium mx-auto px-4 hidden lg:block"
+      >
         <h2 className="flex text-center justify-center py-10 font-bold text-2xl sm:text-3xl md:text-4xl tracking-tighter">
-          Soluções em estofados que elevam o padrão
+          Soluções em estofados que elevam o
           <div className="flex align-baseline justify-center">
             <FlipWords
-              words={["do seu negócio", "da sua casa"]}
+              words={["padrão do seu negócio", "padrão da sua casa"]}
               duration={2000}
               className="text-white text-2xl sm:text-3xl md:text-4xl font-bold"
             />

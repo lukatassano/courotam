@@ -1,10 +1,10 @@
-import { TimelineEntry } from "./Timeline";
+import { TimelineEntry } from "./TimelineSettings";
 
 import histImg1 from "../assets/images/histImgSosa1.png";
 import histImg2 from "../assets/images/histImgSofa2.png";
 import imgEstofadosLuciana from "../assets/images/estofadoslLuciana.png";
 
-export const timelineData: TimelineEntry[] = [
+export const TimelineData: TimelineEntry[] = [
   {
     title: "1970 - Fundação da antiga Estofados Luciana",
     content: (

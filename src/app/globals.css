@@ -56,17 +56,10 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-  }
-}
 
-@layer base {
-  * {
-    @apply border-border;
+    background-color: black;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
+} 
 
 .animated-logo {
   stroke: none;
@@ -130,6 +123,14 @@
   100% {
     transform: translateX(-100%);
   }
+}
+
+#logo-icon {
+  transition: transform 0.2s ease-in-out; /* Adiciona a transição suave */
+}
+
+#logo-icon:hover {
+  transform: scale(1.2); /* Aumenta o tamanho suavemente */
 }
 
 .animate-infinite-scroll {

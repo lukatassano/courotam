@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { LogoCourotam } from "./LogoCourotam";
+import { LogoCourotam } from "../components/LogoCourotam";
 
-export const Hero = () => {
+export const Home = () => {
   return (
     <div className="bg-black text-white py-[72px] sm:py-80 relative overflow-clip  bg-[url('../assets/images/bgCourotam.png')] bg-cover bg-center">
       <div className="absolute inset-0 bg-black opacity-60" />

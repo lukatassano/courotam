@@ -11,7 +11,6 @@ O **Courotam** é um website desenvolvido para apresentar soluções em estofado
 ## 🌟 Funcionalidades
 
 - **Animação de Palavras**: A seção de cabeçalho utiliza um efeito de palavras que alternam automaticamente, destacando diferentes tipos de ambientes que podem ser transformados com os estofados.
-- **Scroll Parallax**: A rolagem suave é aplicada para proporcionar uma navegação fluida e interativa.
 - **Seções Interativas**: Imagens e textos ganham destaque e movimento ao passar o cursor sobre eles, proporcionando uma experiência visual dinâmica.
 
 ## 🛠️ Tecnologias Utilizadas

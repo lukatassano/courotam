@@ -1,17 +1,16 @@
-import { Hero } from "../components/Hero";
-import { LogoTicker } from "../components/LogoTicker";
-import { Features } from "../components/Features";
-import { Footer } from "../components/Footer";
-import { Timeline } from "../components/Timeline";
-import { timelineData } from "../components/TimelineData";
+import { Home } from "../sections/Home";
+import { LogoTicker } from "../sections/LogoTicker";
+import { About } from "../sections/About";
+import { Footer } from "../sections/Footer";
+import { Timeline } from "../sections/Timeline";
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <div className="overflow-x-hidden scrollbar-thin scrollbar-thumb-black scrollbar-track-black">
-        <Hero />
-        <Features/>
-        <Timeline data={timelineData} />
+        <Home />
+        <About/>
+        <Timeline/>
         <LogoTicker />
         <Footer />
       </div>

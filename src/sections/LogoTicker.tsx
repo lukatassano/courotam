@@ -1,4 +1,4 @@
-import LogoCarousel from "./Companylogos";
+import LogoCarousel from "../components/Companylogos";
 
 export const LogoTicker = () => {
   return (

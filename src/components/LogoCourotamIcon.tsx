@@ -1,15 +1,35 @@
-export function LogoCourotamIcon() {
-    return (
-        <svg className="animated-logo" width="585" height="202" viewBox="0 0 585 202" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10.187 28.5478L292.717 146M574.439 28.5478L291.91 146" stroke="#99999910" stroke-width="2"/>
-            <path d="M10.187 28.5478L292.717 164M574.439 28.5478L291.91 164" stroke="#99999910" stroke-width="2"/>
-            <path d="M10.187 28.5478L292.717 182M574.439 28.5478L291.91 182" stroke="#99999910" stroke-width="2"/>
-            <path d="M10.187 28.5478L292.717 201.085M574.439 28.5478L291.91 201.085" stroke="#99999910" stroke-width="2"/>
+import logoIcon from "../assets/images/logoCourotamIcon.png";
 
-            <path className="path1" d="M10.187 28.5478L292.717 146M574.439 28.5478L291.91 146" stroke-width="2"/>
-            <path className="path2" d="M10.187 28.5478L292.717 164M574.439 28.5478L291.91 164" stroke-width="2"/>
-            <path className="path3" d="M10.187 28.5478L292.717 182M574.439 28.5478L291.91 182" stroke-width="2"/>
-            <path className="path4" d="M10.187 28.5478L292.717 201.085M574.439 28.5478L291.91 201.085" stroke-width="2"/>
-        </svg>
-    )
+export function LogoCourotamIcon() {
+  return (
+    <svg
+      id="logo-icon"
+      width="272"
+      height="85"
+      viewBox="0 0 272 85"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 1L136.193 83.5607M271 1L135.807 83.5607"
+        stroke="#999999"
+        stroke-width="2"
+      />
+      <path
+        d="M1 1L136.193 74.4283M271 1L135.807 74.4283"
+        stroke="#999999"
+        stroke-width="2"
+      />
+      <path
+        d="M1 1L136.193 65.8152M271 1L135.807 65.8152"
+        stroke="#999999"
+        stroke-width="2"
+      />
+      <path
+        d="M1 1L136.193 57.202M271 1L135.807 57.202"
+        stroke="#999999"
+        stroke-width="2"
+      />
+    </svg>
+  );
 }
