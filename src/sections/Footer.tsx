@@ -7,13 +7,13 @@ import { MdOutlineEmail } from "react-icons/md";
 
 export const Footer = () => {
   return (
-    <footer className="flex w-full py-12 bg-black text-white/60 ">
-      <div className="w-full bg-zinc-900 m-4 flex py-16 px-24 items-center justify-between border-dashed/white rounded-lg transition-transform duration-200 ease-in-out hover:scale-105">
-        <div className="flex items-center justify-center gap-20">
+    <footer className="flex flex-col w-full py-12 bg-black text-white/60 ">
+      <div className="flex flex-col md:flex-row gap-10 bg-zinc-900 m-1 md:m-2 xl:m-4 md:py-12 py-8 xl:py-20 px-4 md:px-8 xl:px-40 items-center justify-between border-dashed/white rounded-lg transition-transform duration-200 ease-in-out hover:scale-105">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 xl:gap-20">
           <LogoCourotamIcon />
 
           <div>
-            <ul className="text-white/70 text-xl font-bold flex flex-col gap-4">
+            <ul className="text-white/70 text-sm md:text-base lg:text-lg xl:text-2xl font-bold flex flex-row lg:flex-col gap-4 xl:gap-6">
               <li>
                 <a
                   className="transform transition duration-300 ease-in-out hover:text-white"
@@ -42,11 +42,11 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="flex">
-          <ul className="flex flex-col justify-center gap-2.5">
-            <h1 className="text-white font-extrabold text-4xl mb-4">Social</h1>
+        <div className="flex flex-col">
+          <ul className="flex flex-col items-center md:items-start justify-center gap-2.5 md:gap-6">
+            <h1 className="text-white items-center justify-center font-extrabold text-2xl md:text-3xl xl:text-4xl mb-4">Social</h1>
 
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-6 xl:gap-10">
               <li>
                 <a
                   href="mailto:courotam@gmail.com?subject=Proposta%20de%20Negócio&body=Olá,%20gostaria%20de%20discutir%20uma%20proposta%20de%20negócio.%0A%0AFico%20no%20aguardo%20da%20resposta."

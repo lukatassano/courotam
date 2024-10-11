@@ -53,11 +53,11 @@ export const TimelineSettings = ({ data }: { data: TimelineEntry[] }) => {
             key={index}
             className="flex flex-col justify-start pt-10 md:pt-20 md:gap-10"
           >
-            <div className="sticky flex flex-col sm:pl- items-center top-40 self-start w-full lg:max-w-sm md:w-full">
+            <div className="sticky flex flex-col top-40 items-center justify-center md:items-start self-start w-full lg:max-w-sm md:w-full">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
-              <h3 className="text-xl flex flex-col md:pl-20 md:text-m font-bold text-neutral-100 dark:text-neutral-500 ">
+              <h3 className="text-sm md:text-xl flex flex-col sm:pl-4 md:pl-20 md:w-max font-bold text-neutral-100 dark:text-neutral-500 ">
                 {item.title}
               </h3>
             </div>
@@ -66,7 +66,7 @@ export const TimelineSettings = ({ data }: { data: TimelineEntry[] }) => {
               <div
                 className={`flex flex-col lg:flex-col gap-4 lg:gap-16 m-10 justify-center items-center`}
               >
-                <div className="max-w-2xl pl-14 md:w-2/2 text-base md:text-lg lg:text-xl flex flex-col">
+                <div className="max-w-2xl pl-4 md:w-2/2 text-base md:text-lg lg:text-xl flex flex-col">
                   {item.content}
                 </div>
 
