@@ -2,7 +2,7 @@ import LogoCarousel from "../components/Companylogos";
 
 export const LogoTicker = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-black py-12">
       <h2 className="text-base text-center text-neutral-400 pt-44">
         Empresas que confiam em nosso trabalho
       </h2>
