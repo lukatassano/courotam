@@ -8,7 +8,7 @@ export const TimelineData: TimelineEntry[] = [
   {
     title: "1970 - Fundação da antiga Estofados Luciana",
     content: (
-      <p className="text-neutral-400 text-center dark:text-neutral-100 transition duration-300 ease-in-out hover:text-white">
+      <p className="text-neutral-400 dark:text-neutral-100 transition duration-300 ease-in-out hover:text-white">
         Prestes Domingos Tassano funda a Estofados Luciana, focada em móveis
         residenciais sob medida. O nome foi uma homenagem à sua filha, Luciana.
         Desde o início, a empresa se destacou pela alta qualidade dos materiais
@@ -53,7 +53,7 @@ export const TimelineData: TimelineEntry[] = [
   {
     title: "2017 - Revista Casa e Jardim",
     content: (
-      <p className="text-neutral-400 text-center dark:text-neutral-100 transition duration-300 ease-in-out hover:text-white">
+      <p className="text-neutral-400 dark:text-neutral-100 transition duration-300 ease-in-out hover:text-white">
         Os móveis da Courotam foram destaque na revista Casa e Jardim, em um
         projeto do escritório Ambidestro que reformou um apartamento de 130 m²
         em Porto Alegre. A empresa forneceu móveis personalizados, valorizando

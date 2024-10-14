@@ -4,8 +4,7 @@ export function LogoCourotamIcon() {
   return (
     <svg
       id="logo-icon"
-      width="272"
-      height="85"
+      className="h-24 w-44 md:h-20 md:w-64"
       viewBox="0 0 272 85"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

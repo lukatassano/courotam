@@ -34,17 +34,21 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
               handleClick(card);
             }}
             className={cn(
-              "relative overflow-hidden bg-white rounded-xl h-full w-full cursor-pointer"
+              "relative overflow-hidden bg-white rounded-xl h-full w-full cursor-pointer",
+              selected?.id === card.id && "z-50"
             )}
             layoutId={`card-${card.id}`}
             animate={
               selected?.id === card.id
-                ? { scale: 1.2, zIndex: 50 }
+                ? { scale: 1.5, zIndex: 50 }
                 : { scale: 1, zIndex: 1 }
             }
             transition={{ duration: 0.4, ease: "easeInOut" }}
+            style={{
+              position: selected?.id === card.id ? "relative" : "static", 
+            }}
           >
-            <ImageComponent card={card} />
+            <ImageComponent card={card} isSelected={selected?.id === card.id} />
           </motion.div>
         </div>
       ))}
@@ -52,21 +56,38 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   );
 };
 
-const ImageComponent = ({ card }: { card: Card }) => {
+const ImageComponent = ({
+  card,
+  isSelected,
+}: {
+  card: Card;
+  isSelected: boolean;
+}) => {
   return (
-    <div className="relative w-full h-64">
+    <div
+      className={cn(
+        "relative w-full",
+        isSelected ? "h-[400px]" : "h-64"
+      )}
+    >
       {typeof card.thumbnail !== "string" ? (
         <Image
           src={card.thumbnail}
           layout="fill"
-          className="object-cover object-center transition duration-200"
+          className={cn(
+            "transition duration-200",
+            isSelected ? "object-cover" : "object-cover"
+          )}
           alt="thumbnail"
         />
       ) : (
         <motion.img
           layoutId={`image-${card.id}-image`}
           src={card.thumbnail}
-          className="object-cover object-top transition duration-200 w-full h-full"
+          className={cn(
+            "transition duration-200 w-full h-full",
+            isSelected ? "object-cover" : "object-cover"
+          )}
           alt="thumbnail"
         />
       )}

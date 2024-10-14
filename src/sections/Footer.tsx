@@ -7,8 +7,8 @@ import { MdOutlineEmail } from "react-icons/md";
 
 export const Footer = () => {
   return (
-    <footer className="flex flex-col w-full py-12 bg-black text-white/60 ">
-      <div className="flex flex-col md:flex-row gap-10 bg-zinc-900 m-1 md:m-2 xl:m-4 md:py-12 py-8 xl:py-20 px-4 md:px-8 xl:px-40 items-center justify-between border-dashed/white rounded-lg transition-transform duration-200 ease-in-out hover:scale-105">
+    <footer className="flex flex-col w-full bg-black text-white/60 ">
+      <div className="flex flex-col md:flex-row gap-10 bg-zinc-900 md:py-12 py-8 xl:py-20 px-4 md:px-8 xl:px-40 items-center justify-between border-dashed/white rounded-lg">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 xl:gap-20">
           <LogoCourotamIcon />
 
@@ -17,7 +17,7 @@ export const Footer = () => {
               <li>
                 <a
                   className="transform transition duration-300 ease-in-out hover:text-white"
-                  href="/"
+                  href="#home"
                 >
                   Home
                 </a>

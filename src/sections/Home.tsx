@@ -5,7 +5,10 @@ import { LogoCourotam } from "../components/LogoCourotam";
 
 export const Home = () => {
   return (
-    <div className="bg-black text-white py-[72px] sm:py-80 relative overflow-clip  bg-[url('../assets/images/bgCourotam.png')] bg-cover bg-center">
+    <div
+      id="home"
+      className="bg-black text-white py-[72px] sm:py-80 relative overflow-clip  bg-[url('../assets/images/bgCourotam.png')] bg-cover bg-center"
+    >
       <div className="absolute inset-0 bg-black opacity-60" />
       <div className="container relative h-[50vh]">
         <div className="flex items-center justify-center">
