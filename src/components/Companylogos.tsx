@@ -12,23 +12,23 @@ import ceaLogo from "../assets/images/ceaLogo.png";
 
 export default function LogoCarousel() {
   const logos = [
-    { src: ingeconLogo, alt: "Ingecon Logo" },
-    { src: gerdalLogo, alt: "Gerdal Logo" },
-    { src: gastonLogo, alt: "Gaston Logo" },
-    { src: zaraLogo, alt: "Zara Logo" },
-    { src: arcosDoradosLogo, alt: "ArcosDorados Logo" },
-    { src: ambidestroLogo, alt: "Ambidestro Logo" },
-    { src: rennerLogo, alt: "Renner Logo" },
-    { src: paquetaLogo, alt: "Paquetá Logo" },
-    { src: ceaLogo, alt: "C&A Logo" },
+    { src: ingeconLogo, alt: "Ingecon Logo", height: 80 },
+    { src: gerdalLogo, alt: "Gerdal Logo", height: 50 },
+    { src: gastonLogo, alt: "Gaston Logo", height: 60 },
+    { src: zaraLogo, alt: "Zara Logo", height: 55 },
+    { src: arcosDoradosLogo, alt: "Arcos Dorados Logo", height: 90 },
+    { src: ambidestroLogo, alt: "Ambidestro Logo", height: 80 },
+    { src: rennerLogo, alt: "Renner Logo", height: 90 },
+    { src: paquetaLogo, alt: "Paquetá Logo", height: 240 },
+    { src: ceaLogo, alt: "C&A Logo", height: 80 },
   ];
 
   return (
-    <div className="w-full inline-flex flex-nowrap overflow-hidden h-22">
+    <div className="w-full inline-flex flex-nowrap overflow-hidden">
       <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
         {logos.map((logo, index) => (
           <li key={index}>
-            <Image src={logo.src} alt={logo.alt} className="w-20 h-auto" />
+            <Image src={logo.src} alt={logo.alt} height={logo.height} />
           </li>
         ))}
       </ul>
@@ -38,7 +38,7 @@ export default function LogoCarousel() {
       >
         {logos.map((logo, index) => (
           <li key={index}>
-            <Image src={logo.src} alt={logo.alt} className="w-20 h-auto" />
+            <Image src={logo.src} alt={logo.alt} height={logo.height} />
           </li>
         ))}
       </ul>
