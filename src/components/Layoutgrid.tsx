@@ -23,7 +23,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 
   return (
     <div
-      className="w-full h-full p-12 grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-8 relative"
+      className="w-full h-full p-4 md:p-6 xl:p-0 grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-8 relative"
       onClick={handleOutsideClick}
     >
       {cards.map((card, i) => (
@@ -45,7 +45,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
             }
             transition={{ duration: 0.4, ease: "easeInOut" }}
             style={{
-              position: selected?.id === card.id ? "relative" : "static", 
+              position: selected?.id === card.id ? "relative" : "static",
             }}
           >
             <ImageComponent card={card} isSelected={selected?.id === card.id} />
@@ -64,12 +64,7 @@ const ImageComponent = ({
   isSelected: boolean;
 }) => {
   return (
-    <div
-      className={cn(
-        "relative w-full",
-        isSelected ? "h-[400px]" : "h-64"
-      )}
-    >
+    <div className={cn("relative w-full", isSelected ? "h-[400px]" : "h-64")}>
       {typeof card.thumbnail !== "string" ? (
         <Image
           src={card.thumbnail}
